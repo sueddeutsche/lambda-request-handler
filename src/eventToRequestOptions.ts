@@ -3,7 +3,7 @@ import * as url from 'url';
 import { InProcessRequestOptions } from 'in-process-request';
 import { APIGatewayEvent, StringMap, LambdaContext } from './types';
 
-const getValuesFromStringAndMultiString = (stringMap: StringMap<string> | null | undefined, multiStringMap: StringMap<string[]> | null | undefined, lcKeys? = true): StringMap<string> => {
+const getValuesFromStringAndMultiString = (stringMap: StringMap<string> | null | undefined, multiStringMap: StringMap<string[]> | null | undefined, lcKeys = true): StringMap<string> => {
   const retVal: StringMap<string> = {};
   const singleMap = stringMap || {};
   Object.keys(singleMap).forEach(k => {
